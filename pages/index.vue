@@ -1,26 +1,30 @@
 <template>
-  <main>
-    <h1 class="red">Home page</h1>
-    <NuxtLink to="/fun">
-      Galeri Fun |
-      </NuxtLink>
+  <div>
 
-    <NuxtLink to="/vacation">
-      Vacation
-      </NuxtLink>
+    <div>
+      <b-navbar toggleable="lg" type="light" variant="light" class="shadow-md" fixed="top">
+        <b-navbar-brand to="/">NUXT CRUD</b-navbar-brand>
 
-  </main>
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav>
+            <b-nav-item to="/post">POST</b-nav-item>
+            <b-nav-item href="https://santrikoding.com/ebook">EBOOK</b-nav-item>
+            <b-nav-item href="https://santrikoding.com/kelas">COURSE</b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </div>
+
+    <Nuxt />
+  </div>
 </template>
-
-
-<script>
-  export default {
-    // page properties go here
-  }
-</script>
-
 <style>
-  .red {
-    color: red;
-  }
+body{
+  background-color: lightgray;
+}
+.mt-5 {
+  margin-top: 100px!important;
+}
 </style>
